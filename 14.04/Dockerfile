@@ -16,7 +16,7 @@ RUN cd /home/openwrt \
   && git clone https://github.com/coolsnowwolf/lede \
   && cd lede \
   && ./scripts/feeds update -a \
-  && ./scripts/feeds update -a
+  && ./scripts/feeds install -a
 
 COPY default.config /home/openwrt/lede/.config
 
