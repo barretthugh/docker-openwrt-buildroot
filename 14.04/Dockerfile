@@ -1,4 +1,4 @@
 FROM ubuntu:14.04
 
 ENV DEBIAN_FRONTEND noninteractive
-COPY default.conf /COPY default.conf
+COPY default.config /.config
