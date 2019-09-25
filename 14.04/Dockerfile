@@ -20,4 +20,5 @@ RUN cd /home/openwrt \
 
 COPY default.config /home/openwrt/lede/.config
 
-RUN make -j1 V=s
+RUN cd /home/openwrt/lede \
+  && make -j1 V=s
