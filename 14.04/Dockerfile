@@ -13,6 +13,10 @@ WORKDIR /home/openwrt
 RUN cd /home/openwrt \
   && git clone https://github.com/coolsnowwolf/lede \
   && cd lede \
+  && git reset --hard 2915c44 \
+  && git rm --cached package/lean/luci-app-ssr-plus -r \
+  && git pull \
+  && echo 0xDEADBEEF > package/lean/luci-app-ssr-plus/root/etc/config/google_fu_mode \
   && ./scripts/feeds update -a \
   && ./scripts/feeds install -a
 
